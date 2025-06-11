@@ -9,22 +9,24 @@ createApp({
     methods:{
         async getDTRlog(){
             const vm = this;
-            const data = new FormData;
-            data.append("method","getcsvPType")
-            await axios.post("handler/adminHandler.php",data)
+            // const data = new FormData;
+            // data.append("method","getcsvPType")
+            await axios.post("importcsv.php")
             .then((res)=>{
-                console.log(res.data);
+                //console.log(res.data);
                 var pizzatype = [];
                 res.data.forEach(function(i,v){
                     pizzatype.push(
                         [
-                            i[0],
-                            i[1],
-                            i[2],
-                            i[3]
+                            i.pizza_type,
+                            i.name,
+                            i.category,
+                            i.ingredients
                         ]
                     )
                 })
+
+                //console.log(pizzatype);//
                 vm.pizzatype.updateConfig({
                     data: pizzatype
                 }).forceRender();

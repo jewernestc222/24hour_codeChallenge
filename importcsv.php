@@ -1,19 +1,25 @@
 <?php
 
-if ( $handle = fopen( 'file_downloaded/pizza_types.csv', 'r' ) ) {
-    $pizza_type_id ="";
+$pizza_type_id ="";
     $name = "";
     $category = "";
     $ingredients = "";
+    $xy[] ="";
+if ( $handle = fopen( 'file_downloaded/pizza_types.csv', 'r' ) ) {
     while (($row = fgetcsv($handle, 1000, ",")) !== false) {
-      $pizza_type_id = $row[0];
-      $name = $row[1];
-      $category = $row[2];
-      $ingredients = $row[3];
-      print_r($name);
+      
+      $pizza_type_id = str_replace(',', '', $row[0]);
+      $name = str_replace(',', '', $row[1]);
+      $category = str_replace(',', '', $row[2]);
+      $ingredients = str_replace(',', '', $row[3]);
+      
+      array_push($xy,(object)["pizza_type" => $pizza_type_id,"name" => $name, "category" => $category,"ingredients" => $ingredients]);
 
+      //$xy[] = ["pizza_type" => $pizza_type_id,"name" => $name, "category" => $category,"ingredients" => $ingredients];
+
+      
     }
-    fclose($handle);
-}
 
+}
+echo json_encode($xy);
 ?>

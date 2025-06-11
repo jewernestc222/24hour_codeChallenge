@@ -75,18 +75,21 @@ function getserverdatetime(){
     echo json_encode($dat);
 }
 function getcsvPType(){
+    $pizza_type_id ="";
+    $name = "";
+    $category = "";
+    $ingredients = "";
+    $xy[] ="";
     $open = fopen("../file_downloaded/pizza_types.csv", "r");
-    // $data = fgetcsv($open, 1000, ",");
-    $xy = array();
     while (($data = fgetcsv($open, 1000, ",")) !== false) {
-      $pizza_type_id = $data[0];
-      $name = $data[1];
-      $category = $data[2];
-      $ingredients = $data[3];
-
-      $data[] = ["pizza_type" => $pizza_type_id,"name" => $name, "category" => $category,"ingredients" => $ingredients];
+      $pizza_type_id = str_replace(',', '', $row[0]);
+      $name = str_replace(',', '', $row[1]);
+      $category = str_replace(',', '', $row[2]);
+      $ingredients = str_replace(',', '', $row[3]);
+      
+      array_push($xy,(object)["pizza_type" => $pizza_type_id,"name" => $name, "category" => $category,"ingredients" => $ingredients]);
 
     }
-    echo json_encode($data);
+    echo json_encode($xy);
 }
 ?>
