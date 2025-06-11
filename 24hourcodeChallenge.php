@@ -195,55 +195,40 @@
         }
     </style>
 </head>
-
 <body>
-
     <!-- Begin page -->
     <div id="layout-wrapper">
-
         <header id="page-topbar">
-    <div class="layout-width">
-        <div class="navbar-header">
-            <div class="d-flex">
-                <!-- LOGO -->
-                <div class="navbar-brand-box horizontal-logo">
-                    <a href="index.html" class="logo logo-dark">
-
-                    </a>
-
-                    <a href="index.html" class="logo logo-light">
-
-                    </a>
-                </div>
-
-                <button type="button" class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger" id="topnav-hamburger-icon">
-                    <span class="hamburger-icon">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </span>
-                </button>
-
-                <!-- App Search-->
-                <form class="app-search d-none d-md-block">
-                    <div class="position-relative" style="color:#fff;">
-                        <span style="display:block;padding-top:5px;font-size:26px;font-weight:bold;">24 Hour Code Challenge</span>
+            <div class="layout-width">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box horizontal-logo">
+                            <a href="index.html" class="logo logo-dark">
+                            </a>
+                            <a href="index.html" class="logo logo-light">
+                            </a>
+                        </div>
+                        <button type="button" class="btn btn-sm px-3 fs-16 header-item vertical-menu-btn topnav-hamburger" id="topnav-hamburger-icon">
+                            <span class="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </button>
+                        <!-- App Search-->
+                        <form class="app-search d-none d-md-block">
+                            <div class="position-relative" style="color:#fff;">
+                                <span style="display:block;padding-top:5px;font-size:26px;font-weight:bold;">24 Hour Code Challenge</span>
+                            </div>
+                        </form>
                     </div>
-                </form>
+                    <div class="d-flex align-items-center">
+                        <div class="datetoday"></div>
+                    </div>
+                </div>
             </div>
-
-            <div class="d-flex align-items-center">
-
-                
-
-                <div class="datetoday"></div>
-
-
-            </div>
-        </div>
-    </div>
-</header>
-
+        </header>
         <!-- ============================================================== -->
         <!-- Start right Content here -->
         <!-- ============================================================== -->
@@ -288,22 +273,13 @@
             </footer>
         </div>
         <!-- end main content-->
-
     </div>
     <!-- END layout-wrapper -->
-
-
-
-    <!--start back-to-top-->
+   <!--start back-to-top-->
     <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
         <i class="ri-arrow-up-line"></i>
     </button>
     <!--end back-to-top-->
-
-    
-
-   
-
     <!-- JAVASCRIPT -->
     <script src="apps/lib/axios.js"></script>
     <script src="apps/lib/vue.global.js"></script>
@@ -313,20 +289,15 @@
     <script src="assets/libs/feather-icons/feather.min.js"></script>
     <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
     <script src="assets/js/plugins.js"></script>
-
     <script src="assets/js/moment.js"></script>
     <script src="assets/js/moment.duration.format.js"></script>
-
     <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
-
     <!-- gridjs js -->
     <script src="assets/libs/gridjs/gridjs.umd.js"></script>
     <script src="assets/libs/%40simonwep/pickr/pickr.min.js"></script>
     <script src="assets/js/pages/form-pickers.init.js"></script>
-    
     <!-- gridjs init -->
     <script src="assets/app/app.24hourcodeChallenge.js"></script>
-
     <!-- App js -->
     <script src="assets/js/app.js"></script>
 </body>

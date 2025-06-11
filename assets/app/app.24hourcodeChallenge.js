@@ -9,9 +9,9 @@ createApp({
     methods:{
         async getDTRlog(){
             const vm = this;
-            // const data = new FormData;
-            // data.append("method","getcsvPType")
-            await axios.post("importcsv.php")
+            const data = new FormData;
+            data.append("method","getcsvPType")
+            await axios.post("handler/adminHandler.php",data)
             .then((res)=>{
                 //console.log(res.data);
                 var pizzatype = [];

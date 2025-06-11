@@ -4,10 +4,7 @@
 		private $db;
 		private $serverName = "localhost";
 		private $coninfo = array("Database"=>"24hourcodeChallenge_db","UID"=>"sa","PWD"=>"AAbbCC!!123");
-		// private $coninfo = array("Database"=>"attendance_sheet_pavru","UID"=>"sa","PWD"=>"pavruDB$%123456789");
 		private $conn_state;
-
-
 		function __construct(){
 			$this->db = sqlsrv_connect($this->serverName,$this->coninfo);
 
@@ -18,7 +15,6 @@
 				$this->conn_state = sqlsrv_errors();
 			}
 		}
-
 		function connection_state(){
 			return $this->conn_state;
 		}
@@ -30,6 +26,5 @@
 		//	sqlsrv_close($this->db);
 		}
 	}
-
 ?>
 
